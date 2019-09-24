@@ -2,7 +2,7 @@ import pandas as pd
 import random
 
 # function for nba lottery odds
-def nba_draft_lottery_simulation(list_teams, list_probability, n_simulations=10):
+def nba_draft_lottery_simulation(list_teams, list_probability, n_simulations=10, random_state=42):
     # multiply each by 1000
     count_list = [int(x*1000) for x in list_probability]
     
@@ -19,6 +19,8 @@ def nba_draft_lottery_simulation(list_teams, list_probability, n_simulations=10)
         for i in range(len(list_teams)):
             # randomly shuffle the list of teams
             random.shuffle(list_of_teams)
+            # set random seed
+            random.seed(random_state)
             # get random number
             random_number = random.randint(0, len(list_of_teams)-1)
             # select a random team
