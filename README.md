@@ -4,6 +4,12 @@ The `nba_draft_lottery_simulation` function takes a list of teams, another list 
 
 To install, use: `pip install git+https://github.com/aaronengland/nba_draft_lottery_simulation.git`
 
+Arguments:
+- `list_teams`: list of teams.
+- `list_probability`: list of probabilities of getting first pick respective of team.
+- `n_simulations`: number of simulations (default = 10).
+- `random_state`: random seed for drawsc (default = 42).
+
 Example:
 
 ```
@@ -23,5 +29,6 @@ probability_list = [0.14,0.14,0.14,0.125,0.105,0.09,0.06,0.06,0.06,0.03,0.02,
 # generate predictions
 predicted_draft_order = nba_draft_lottery_simulation(list_teams=teams_list, 
                                                      list_probability=probability_list,
-                                                     n_simulations=10)
+                                                     n_simulations=10,
+                                                     random_state=42)
 ```
