@@ -2,13 +2,13 @@ import pandas as pd
 import random
 
 # function for nba lottery odds
-def nba_draft_lottery_simulation(list_teams, list_probability):
+def nba_draft_lottery_simulation(list_teams, list_probability, n_simulations=10):
     # multiply each by 1000
     count_list = [int(x*1000) for x in list_probability]
     
     # create empty pandas df to append each prediction
     empty_df = pd.DataFrame({'Team': list_teams})
-    for x in range(10):
+    for x in range(n_simulations):
         # put the teams in a list n times
         list_of_teams = []
         for i in range(len(count_list)):
