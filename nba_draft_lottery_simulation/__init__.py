@@ -5,7 +5,6 @@ import random
 def nba_draft_lottery_simulation(list_teams, list_probability, n_simulations=10, random_state=42):
     # multiply each by 1000
     count_list = [int(x*1000) for x in list_probability]
-    
     # create empty pandas df to append each prediction
     empty_df = pd.DataFrame({'Team': list_teams})
     for x in range(n_simulations):
