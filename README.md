@@ -8,7 +8,7 @@ Arguments:
 - `list_teams`: list of teams.
 - `list_probability`: list of probabilities of getting first pick respective of team.
 - `n_simulations`: number of simulations (default = 10).
-- `random_state`: random seed for drawsc (default = 42).
+- `random_state`: random seed for draws (default = 42).
 
 Example:
 
